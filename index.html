@@ -27,13 +27,15 @@
             // Create a data layer event when the button is clicked
             var dataLayerEvent = {
                 event: 'buttonClick',
-                buttonId: 'myButton',
+                buttonId: 'homepage-myButton',
                 buttonLabel: 'Click Me'
             };
 
             // Push the data layer event to the dataLayer array
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push(dataLayerEvent);
+            gtag('event', 'buttonClick', { 'button_id': {butonId}, 'button_text': {buttonLabel} });
+
 
             // Perform other actions if needed
             alert('Button clicked!');
