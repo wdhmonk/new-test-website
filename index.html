@@ -34,7 +34,7 @@
             // Push the data layer event to the dataLayer array
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push(dataLayerEvent);
-            gtag('event', 'buttonClick', { 'button_id': buttonId, 'button_text': buttonLabel });
+            gtag('event', 'buttonClick', { 'button_id': dataLayerEvent.buttonId , 'button_text': dataLayerEvent.buttonLabel});
 
 
             // Perform other actions if needed
