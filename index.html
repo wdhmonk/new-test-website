@@ -18,8 +18,27 @@
 <body>
     <h1>Hello, World!</h1>
 
+    <button id="myButton">Click Me</button>
+
     <script>
-        // You can add JavaScript code here if needed
+        var button = document.getElementById('myButton');
+
+        button.addEventListener('click', function() {
+            // Create a data layer event when the button is clicked
+            var dataLayerEvent = {
+                event: 'buttonClick',
+                buttonId: 'myButton',
+                buttonLabel: 'Click Me'
+            };
+
+            // Push the data layer event to the dataLayer array
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push(dataLayerEvent);
+
+            // Perform other actions if needed
+            alert('Button clicked!');
+        });
     </script>
+    
 </body>
 </html>
