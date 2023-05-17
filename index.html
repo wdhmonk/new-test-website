@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-    
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MXP585LWQ1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-MXP585LWQ1');
-    
-</script>
-    
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXP585LWQ1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MXP585LWQ1');
+
+    </script>
+
     <title>Hello, World!</title>
 </head>
+
 <body>
     <h1>Hello, World!</h1>
 
@@ -23,7 +25,7 @@
     <script>
         var button = document.getElementById('myButton');
 
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             // Create a data layer event when the button is clicked
             var dataLayerEvent = {
                 event: 'buttonClick',
@@ -34,7 +36,11 @@
             // Push the data layer event to the dataLayer array
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push(dataLayerEvent);
-            gtag('event', 'buttonClick', { 'button_id': dataLayerEvent.buttonId , 'button_text': dataLayerEvent.buttonLabel});
+            gtag('event', 'buttonClick',
+                {
+                    'button_id': dataLayerEvent.buttonId,
+                    'button_text': dataLayerEvent.buttonLabel
+                });
 
 
             // Perform other actions if needed
@@ -43,18 +49,36 @@
     </script>
 
 
-<form action="submit.php" method="POST">
-    <label for="firstName">First Name:</label>
-    <input type="text" id="firstName" name="firstName" required>
+    <form action="submit.php" method="POST">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
 
-    <label for="lastName">Last Name:</label>
-    <input type="text" id="lastName" name="lastName" required>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-    <button type="submit">Submit</button>
-</form>
-    
+        <button type="submit">Submit</button>
+        <script>
+            var button = document.getElementById('Submit');
+
+            button.addEventListener('click', function () {
+                // Create a data layer event when the button is clicked
+                var dataLayerEvent = {
+                    event: 'buttonClick',
+                    buttonId: 'submit-button',
+                    buttonLabel: 'submit'
+                };
+
+                gtag('event', 'form-submit',
+                    {
+                        'button_id': dataLayerEvent.buttonId,
+                        'button_text': dataLayerEvent.buttonLabel
+                    });
+        </script>
+    </form>
+
 </body>
+
 </html>
