@@ -12,60 +12,7 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-PM8L4JG');</script>
     <!-- End Google Tag Manager -->
-<script>
-
-// DataLayer and the gtag function.
-
-window.dataLayer = window.dataLayer || [];
-
-function gtag(){dataLayer.push(arguments);}
-
- 
-
-// Set default consent values for advertising and analytics to off for all regions
-
-gtag('consent', 'default', {'analytics_storage': 'denied', 'ad_storage': 'denied',});
-
- 
-
-// Grant consent  for advertising and analytics to AU region only
-
-gtag('consent', 'default', {'analytics_storage': 'granted',  'ad_storage': 'granted', 'region': ['AU']});
-
- 
-
-// turn off ads data
-
-gtag('set', 'ads_data_redaction', true); //having this as a separate line should be fine, just to nitpick I believe this is intended to be passed after consent params as per documentation here
-
-gtag('set', 'url_passthrough', true);
-
-
- 
-
-</script>
-
-
-<!-- Google tag (gtag.js) -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MXP585LWQ1"></script>
-
-
-<script>
-
-gtag('js', new Date());
-
-
-
- 
-
-//GA4 Account
-
-gtag('config', 'G-MXP585LWQ1'); //as per documentation here
-
-
-
-</script>  
+  
     <title>Hello, World!</title>
 </head>
 
